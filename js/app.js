@@ -1,5 +1,14 @@
-//Shorthand Document Ready Function
+// Functions to be called back
+function playHadouken() {
+	$("#hadouken-sound")[0].volume = 0.5;
+	$("#hadouken-sound")[0].load();
+	$("#hadouken-sound")[0].play();
+}
+
+// Shorthand Document Ready Function
 $(function() {
+
+
 
 	$(".ryu").mouseenter(function() {
 		$(".ryu-still").hide();
@@ -11,11 +20,18 @@ $(function() {
 		$(".ryu-ready").hide();
 	})
 	.mousedown(function() {
-		// play hadouken sound
+		playHadouken();
 		$(".ryu-ready").hide();
 		$(".ryu-throwing").show();
-		$(".hadouken").show();
-		// animate hadouken to the right of the screen
+		$(".hadouken").finish().show()
+		.animate(
+				{"left": "300px"},
+				"fast",
+				function() {
+					$(this).hide();
+					$(this).css("left", "-212px");
+				}
+		);
 	})
 	.mouseup(function() {
 		$(".ryu-throwing").hide();
