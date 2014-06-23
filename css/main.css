@@ -1,5 +1,11 @@
 body {
 	background: #000;
+	color: #fff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	letter-spacing: 2px;
+	line-height: 24px;
 }
 
 .main {
@@ -8,6 +14,19 @@ body {
 	padding-left: 100px;
 	min-width: 1200px;
 	height: 500px;
+}
+
+#controls-description {
+	display: block;
+	width: 800px;
+	height: 80px;
+	position: relative;
+	clear: both;
+	padding: 10px 0 0 150px;
+}
+
+ul {
+	list-style: disc;
 }
 
 .ryu {
