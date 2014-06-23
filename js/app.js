@@ -1,3 +1,19 @@
+// Start anonymous function
+(function() {
+
+/*
+- Variables for app
+- Will ask mentor Mike if it's a good item to assign these variables to the various jQuery functions below and how to do this
+*/
+var ryuReady = $(".ryu-ready");
+var ryuStill = $(".ryu-still");
+var ryuThrowing = $(".ryu-throwing");
+var ryuCool = $(".ryu-cool");
+var imageHadouken = $(".hadouken");
+var soundHadouken = $("#hadouken-sound");
+
+
+
 // Callback function to play ryu hadouken sound
 function hadoukenSound() {
 	$("#hadouken-sound")[0].volume = 0.5;
@@ -93,3 +109,5 @@ $(function() {
 	});
 
 });
+
+})();
